@@ -19,7 +19,7 @@
 
 require "pig_latin"
 
-describe "#translate" do
+describe "translate" do
 
   it "translates a word beginning with a vowel" do
     s = translate("apple")
@@ -68,5 +68,8 @@ describe "#translate" do
   # Test-driving bonus:
   # * write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
   # * retain the punctuation from the original phrase
-
+  it "keeps capitalization of words" do
+    s = translate("the quick brown Fox")
+    s.should == "ethay ickquay ownbray Oxfay"
+  end
 end
